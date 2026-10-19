@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PS Web Studio | Your Vision, Our Design</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#080611;color:white;line-height:1.6}
+header{padding:20px 7%;display:flex;justify-content:space-between;align-items:center;background:#100b20;position:sticky;top:0;border-bottom:1px solid #8b35ff;z-index:5}
+.logo{font-size:22px;font-weight:bold;color:#c084fc}
+nav a{color:white;text-decoration:none;margin-left:15px;font-size:14px}
+.hero{text-align:center;padding:85px 20px;background:radial-gradient(ellipse at top,#402078,#080611 70%)}
+.tag{color:#d8b4fe;letter-spacing:3px;font-size:12px}
+h1{font-size:clamp(36px,8vw,64px);line-height:1.15;margin:20px 0}
+.glow{color:#c084fc;text-shadow:0 0 25px #9333ea}
+p{color:#c9c4d7}
+.btn{display:inline-block;background:linear-gradient(90deg,#7c3aed,#c026d3);color:white;padding:12px 22px;border-radius:9px;text-decoration:none;font-weight:bold;margin:12px 5px;border:0;cursor:pointer}
+section{padding:55px 7%}
+h2{text-align:center;font-size:30px;margin-bottom:12px}
+.sub{text-align:center;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:28px}
+.card{background:#151024;border:1px solid #392454;padding:23px;border-radius:15px;transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:#c084fc;box-shadow:0 0 18px #52208055}
+.card h3{color:#d8b4fe;margin-bottom:10px}
+.price{font-size:27px;font-weight:bold;margin:12px 0}
+ul{padding-left:20px;color:#d1cadd}
+li{margin:7px 0}
+form{max-width:600px;margin:auto;background:#151024;padding:22px;border-radius:15px;border:1px solid #482568}
+input,select,textarea{width:100%;padding:13px;margin:8px 0 15px;border:1px solid #49345f;border-radius:8px;background:#0c0916;color:white;font-size:15px}
+label{font-size:14px;color:#e9d5ff}
+.center{text-align:center}
+footer{text-align:center;padding:28px;background:#100b20;color:#c4b5fd}
+a{overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">✦ PS WEB STUDIO</div>
+<nav><a href="#home">Home</a><a href="#designs">Designs</a><a href="#pricing">Prices</a><a href="#order">Order</a></nav>
+</header>
+
+<div class="hero" id="home">
+<div class="tag">CREATIVE DIGITAL AGENCY</div>
+<h1>YOUR VISION<br><span class="glow">OUR DESIGN.</span></h1>
+<p>We build stunning websites for shops, businesses and brands.</p>
+<a class="btn" href="#designs">Explore Designs ↗</a>
+<a class="btn" href="#order">Start Your Order</a>
+</div>
+
+<section id="designs">
+<h2>Our Creative Designs</h2>
+<p class="sub">Choose a style for your next website.</p>
+<div class="grid">
+<div class="card"><h3>💜 Creative Glow</h3><p>Neon effects, dark backgrounds and a futuristic look.</p></div>
+<div class="card"><h3>🏢 Business Pro</h3><p>Professional layouts for companies and services.</p></div>
+<div class="card"><h3>🛍️ Shop Smart</h3><p>Product showcases for shops and online businesses.</p></div>
+</div>
+</section>
+
+<section id="pricing">
+<h2>Website Packages</h2>
+<p class="sub">Choose a package and tell us what you need.</p>
+<div class="grid">
+<div class="card"><h3>Starter</h3><p class="price">₹999*</p><ul><li>One-page design</li><li>Mobile-friendly layout</li><li>Contact section</li></ul><a class="btn" href="#order">Choose Starter</a></div>
+<div class="card"><h3>Business</h3><p class="price">₹2,499*</p><ul><li>Up to 4 pages</li><li>Custom styling</li><li>WhatsApp contact link</li></ul><a class="btn" href="#order">Choose Business</a></div>
+<div class="card"><h3>Premium</h3><p class="price">₹4,999*</p><ul><li>Custom multi-page design</li><li>Animations and sections</li><li>Extra customization</li></ul><a class="btn" href="#order">Choose Premium</a></div>
+</div>
+<p class="center" style="margin-top:20px;font-size:12px">*Sample starting prices. Confirm final price, features and hosting before accepting an order.</p>
+</section>
+
+<section id="order">
+<h2>Place Your Order</h2>
+<p class="sub">Tell us about your dream website.</p>
+<form id="orderForm">
+<label>Your Name</label>
+<input id="name" required placeholder="Enter your name">
+<label>Business / Brand Name</label>
+<input id="business" required placeholder="Your business name">
+<label>Choose Package</label>
+<select id="package"><option>Starter</option><option>Business</option><option>Premium</option><option>Custom Website</option></select>
+<label>Website Type</label>
+<select id="type"><option>Business Website</option><option>Online Shop</option><option>Portfolio</option><option>Other</option></select>
+<label>Describe Your Requirements</label>
+<textarea id="details" rows="4" placeholder="Colours, pages and features you need"></textarea>
+<button class="btn" type="submit">Send Order on WhatsApp ↗</button>
+<p style="font-size:12px">WhatsApp will open with your order details. You can review and send the message there.</p>
+</form>
+</section>
+
+<section id="reviews">
+<h2>Client Reviews</h2>
+<p class="sub">Your feedback helps us grow.</p>
+<div class="card center"><h3>⭐ Your Experience Matters</h3><p>After your project is completed, share your honest feedback with us.</p><a class="btn" href="#order">Contact Our Studio</a></div>
+</section>
+
+<footer>
+<div class="logo">PS WEB STUDIO</div>
+<p>YOUR VISION | OUR DESIGN</p>
+<p>Creative websites. Bold ideas. Better online presence.</p>
+<p style="margin-top:12px;font-size:12px">© 2026 PS Web Studio</p>
+</footer>
+
+<script>
+document.getElementById('orderForm').addEventListener('submit',function(e){
+e.preventDefault();
+const phone=prompt('Enter your WhatsApp number with country code, without + sign (example: 91XXXXXXXXXX):');
+if(!phone||!/^\d{10,15}$/.test(phone)){alert('Please enter a valid WhatsApp number with country code.');return;}
+const msg='PS WEB STUDIO - NEW WEBSITE ORDER%0AName: '+encodeURIComponent(document.getElementById('name').value)+'%0ABusiness: '+encodeURIComponent(document.getElementById('business').value)+'%0APackage: '+encodeURIComponent(document.getElementById('package').value)+'%0AWebsite Type: '+encodeURIComponent(document.getElementById('type').value)+'%0ADetails: '+encodeURIComponent(document.getElementById('details').value);
+window.open('https://wa.me/'+phone+'?text='+msg,'_blank');
+});
+</script>
+</body>
+</html>
