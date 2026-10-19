@@ -1,115 +1,172 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090711">
+<meta name="description" content="PS Web Studio creates creative, modern and affordable websites for shops, creators and businesses.">
 <title>PS Web Studio | Your Vision, Our Design</title>
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#080611;color:white;line-height:1.6}
-header{padding:20px 7%;display:flex;justify-content:space-between;align-items:center;background:#100b20;position:sticky;top:0;border-bottom:1px solid #8b35ff;z-index:5}
-.logo{font-size:22px;font-weight:bold;color:#c084fc}
-nav a{color:white;text-decoration:none;margin-left:15px;font-size:14px}
-.hero{text-align:center;padding:85px 20px;background:radial-gradient(ellipse at top,#402078,#080611 70%)}
-.tag{color:#d8b4fe;letter-spacing:3px;font-size:12px}
-h1{font-size:clamp(36px,8vw,64px);line-height:1.15;margin:20px 0}
-.glow{color:#c084fc;text-shadow:0 0 25px #9333ea}
-p{color:#c9c4d7}
-.btn{display:inline-block;background:linear-gradient(90deg,#7c3aed,#c026d3);color:white;padding:12px 22px;border-radius:9px;text-decoration:none;font-weight:bold;margin:12px 5px;border:0;cursor:pointer}
-section{padding:55px 7%}
-h2{text-align:center;font-size:30px;margin-bottom:12px}
-.sub{text-align:center;margin-bottom:30px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:28px}
-.card{background:#151024;border:1px solid #392454;padding:23px;border-radius:15px;transition:.25s}
-.card:hover{transform:translateY(-5px);border-color:#c084fc;box-shadow:0 0 18px #52208055}
-.card h3{color:#d8b4fe;margin-bottom:10px}
-.price{font-size:27px;font-weight:bold;margin:12px 0}
-ul{padding-left:20px;color:#d1cadd}
-li{margin:7px 0}
-form{max-width:600px;margin:auto;background:#151024;padding:22px;border-radius:15px;border:1px solid #482568}
-input,select,textarea{width:100%;padding:13px;margin:8px 0 15px;border:1px solid #49345f;border-radius:8px;background:#0c0916;color:white;font-size:15px}
-label{font-size:14px;color:#e9d5ff}
-.center{text-align:center}
-footer{text-align:center;padding:28px;background:#100b20;color:#c4b5fd}
-a{overflow-wrap:anywhere}
+:root{--bg:#090711;--panel:#141020;--panel2:#1b1430;--purple:#9b5cff;--pink:#ec72ff;--text:#f8f5ff;--muted:#b9b0cc;--line:rgba(190,145,255,.22);--green:#63f5bd}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 0%,#281348 0,transparent 34%),radial-gradient(circle at 0% 35%,#17102c 0,transparent 30%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button,a,.card{transition:.25s ease}.wrap{width:min(1140px,92%);margin:auto}.nav{position:sticky;top:0;z-index:20;background:rgba(9,7,17,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.navin{display:flex;align-items:center;justify-content:space-between;gap:15px;min-height:74px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.3px}.logo{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#7b2cff,#e16dff);box-shadow:0 0 28px #8b39ff55;font-size:20px}.brand small{display:block;color:#c5a8ff;font-size:10px;letter-spacing:2px}.navlinks{display:flex;gap:20px;align-items:center;font-size:13px;color:var(--muted)}.navlinks a:hover{color:#fff}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;border-radius:13px;padding:12px 18px;font-weight:800;cursor:pointer;background:linear-gradient(110deg,#8a42ff,#d55bff);color:white;box-shadow:0 8px 28px #8a42ff30}.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}.btn.secondary{background:#ffffff08;border-color:var(--line);box-shadow:none}.btn.small{padding:9px 13px;font-size:13px}.hero{padding:76px 0 58px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:44px}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid var(--line);border-radius:99px;color:#ddc7ff;background:#ffffff06;font-size:12px;font-weight:700}.dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 12px var(--green)}h1{font-size:clamp(42px,6vw,72px);line-height:1.04;letter-spacing:-2.5px;margin:20px 0}h1 span,.gradient{background:linear-gradient(100deg,#b78aff,#f18bff 55%,#8cceff);-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{color:var(--muted);font-size:17px;max-width:570px}.actions{display:flex;flex-wrap:wrap;gap:12px;margin:25px 0}.mini-trust{display:flex;gap:18px;flex-wrap:wrap;color:#d7cce9;font-size:12px}.mini-trust span{display:flex;gap:6px;align-items:center}.showcase{position:relative;min-height:410px;display:grid;place-items:center}.glow{position:absolute;width:280px;height:280px;background:#943bff55;filter:blur(85px);border-radius:50%}.mock-window{position:relative;width:100%;max-width:470px;padding:14px;border:1px solid #b18aff50;border-radius:22px;background:linear-gradient(145deg,#211833,#100d1a);box-shadow:0 28px 90px #0009,0 0 55px #8a42ff18;transform:rotate(1.5deg)}.browserbar{display:flex;align-items:center;gap:6px;padding:5px 4px 13px}.browserbar i{width:8px;height:8px;border-radius:50%;background:#f17e9e}.browserbar i:nth-child(2){background:#ffcf71}.browserbar i:nth-child(3){background:#74e8b3}.browserbar span{margin-left:auto;color:#a99bbd;font-size:10px}.mock-content{border-radius:14px;overflow:hidden;background:#0e0a18}.mock-hero{padding:24px 20px 16px;background:linear-gradient(130deg,#28144d,#0e0b1b 65%)}.mock-hero small{color:#c9aaff;letter-spacing:2px;font-size:9px}.mock-hero h3{font-size:27px;line-height:1.1;margin:12px 0}.mock-hero p{font-size:10px;color:#c4b7d7}.mock-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:10px}.tile{height:100px;border-radius:10px;padding:9px;display:flex;align-items:end;font-size:10px;font-weight:800;background:linear-gradient(150deg,#8b55d8,#25163b 70%)}.tile:nth-child(2){background:linear-gradient(150deg,#eb83bd,#3d1c45 75%)}.tile:nth-child(3){background:linear-gradient(150deg,#59b6d5,#15253f 75%)}.section{padding:68px 0}.section-head{text-align:center;max-width:690px;margin:0 auto 32px}.kicker{color:#c7a4ff;text-transform:uppercase;letter-spacing:2px;font-size:11px;font-weight:900}.section h2{font-size:clamp(29px,4vw,43px);letter-spacing:-1px;line-height:1.15;margin:10px 0}.section-head p,.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(150deg,#1a1428,#100d18);border:1px solid var(--line);border-radius:20px;overflow:hidden}.card:hover{transform:translateY(-5px);border-color:#b58aff88;box-shadow:0 16px 40px #0004}.sample-art{height:180px;padding:16px;display:flex;align-items:end;position:relative;overflow:hidden;background:linear-gradient(135deg,#4a217f,#120d20)}.sample-art:before{content:"";position:absolute;width:190px;height:190px;border-radius:50%;background:#ef8bff50;filter:blur(3px);right:-30px;top:-65px}.sample-art:after{content:"";position:absolute;width:120px;height:120px;border-radius:28px;background:#ffffff12;border:1px solid #ffffff20;transform:rotate(25deg);right:40px;bottom:-48px}.sample-art.shop{background:linear-gradient(135deg,#103f50,#101524)}.sample-art.food{background:linear-gradient(135deg,#793b24,#20101a)}.sample-art.port{background:linear-gradient(135deg,#344d90,#17112a)}.sample-art.coach{background:linear-gradient(135deg,#28634c,#111b20)}.sample-art.event{background:linear-gradient(135deg,#78315d,#201020)}.art-label{position:relative;z-index:1;font-size:21px;font-weight:900;text-shadow:0 3px 18px #000}.card-body{padding:18px}.card-body h3{margin:0 0 6px;font-size:18px}.card-body p{margin:0 0 14px;color:var(--muted);font-size:13px}.pill{display:inline-block;padding:5px 9px;border:1px solid var(--line);border-radius:99px;font-size:11px;color:#d9c8ff}.price-grid{align-items:stretch}.price-card{padding:23px;position:relative}.price-card.featured{border-color:#b77cff;background:linear-gradient(150deg,#291747,#130e20);box-shadow:0 0 40px #8d42ff14}.price{font-size:42px;line-height:1.2;font-weight:950;letter-spacing:-1.5px;margin:13px 0 3px}.price small{font-size:13px;font-weight:500;color:var(--muted);letter-spacing:0}.price-card ul{padding-left:19px;color:#d8d0e5;font-size:13px;min-height:118px}.price-card li{margin:8px 0}.price-card .btn{width:100%;margin-top:8px}.note{border:1px solid var(--line);background:#ffffff05;padding:13px 15px;border-radius:13px;color:#cfc3df;font-size:12px;margin-top:18px}.builder{display:grid;grid-template-columns:1fr .8fr;gap:22px;align-items:start}.form-panel,.summary{background:linear-gradient(145deg,#191327,#100d18);border:1px solid var(--line);border-radius:20px;padding:23px}.field{margin-bottom:16px}.field label{display:block;font-weight:750;font-size:13px;margin-bottom:7px}.field input,.field select,.field textarea{width:100%;background:#0c0913;border:1px solid #49365f;color:#fff;border-radius:11px;padding:12px 13px;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:#b18aff;box-shadow:0 0 0 3px #9b5cff20}.field textarea{min-height:100px;resize:vertical}.choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.choice{border:1px solid #49365f;border-radius:12px;padding:12px;background:#0c0913;cursor:pointer;display:flex;gap:9px;align-items:flex-start;font-size:12px}.choice input{accent-color:#a86aff;margin-top:3px}.choice:has(input:checked){border-color:#b18aff;background:#8b4bff16}.summary{position:sticky;top:94px}.summary h3{margin:0}.sumrow{display:flex;justify-content:space-between;gap:15px;padding:12px 0;border-bottom:1px solid var(--line);font-size:13px}.sumrow span:first-child{color:var(--muted)}.sumtotal{display:flex;justify-content:space-between;font-size:22px;font-weight:900;padding:17px 0}.summary .btn{width:100%;margin-top:8px}.tiny{font-size:11px;color:var(--muted)}.steps{counter-reset:step}.step{padding:22px;border:1px solid var(--line);border-radius:18px;background:#ffffff04}.stepno{width:37px;height:37px;border-radius:12px;display:grid;place-items:center;background:#8b4bff25;color:#d9bcff;font-weight:900;margin-bottom:13px}.step h3{margin:0 0 6px}.step p{margin:0;color:var(--muted);font-size:13px}.faq{max-width:800px;margin:auto}.faq details{border-bottom:1px solid var(--line);padding:17px 3px}.faq summary{cursor:pointer;font-weight:800}.faq details p{color:var(--muted);font-size:14px}.contact{border:1px solid var(--line);border-radius:24px;padding:34px;background:radial-gradient(circle at 90% 0,#552d85 0,transparent 45%),#171020;display:flex;justify-content:space-between;align-items:center;gap:20px}.contact h2{margin:7px 0;font-size:clamp(27px,4vw,40px)}footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:12px}.footerin{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.toast{display:none;position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:50;background:#211735;border:1px solid #b18aff;padding:12px 16px;border-radius:12px;max-width:90%;box-shadow:0 12px 35px #0009;font-size:13px}.toast.show{display:block}.mobile-menu{display:none}
+@media(max-width:800px){.navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:48px;gap:15px}.showcase{min-height:320px}.grid{grid-template-columns:repeat(2,1fr)}.builder{grid-template-columns:1fr}.summary{position:static}.contact{display:block}.contact .btn{margin-top:15px}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.sample-art{height:160px}.section{padding:50px 0}.form-panel,.summary{padding:17px}.choice-grid{grid-template-columns:1fr}.hero h1{letter-spacing:-1.5px}.mini-trust{gap:10px}.navin{min-height:66px}.brand{font-size:14px}.logo{width:38px;height:38px}.mock-tiles .tile{height:80px}.price{font-size:38px}}
 </style>
 </head>
 <body>
-<header>
-<div class="logo">✦ PS WEB STUDIO</div>
-<nav><a href="#home">Home</a><a href="#designs">Designs</a><a href="#pricing">Prices</a><a href="#order">Order</a></nav>
+<header class="nav">
+ <div class="wrap navin">
+  <a class="brand" href="#home" aria-label="PS Web Studio home"><span class="logo">PS</span><span>PS WEB STUDIO<small>YOUR VISION | OUR DESIGN</small></span></a>
+  <nav class="navlinks"><a href="#designs">Designs</a><a href="#prices">Prices</a><a href="#custom">Build Your Own</a><a href="#process">How It Works</a><a href="#faq">FAQ</a></nav>
+  <a class="btn small" href="#custom">Start an Order ↗</a>
+ </div>
 </header>
-
-<div class="hero" id="home">
-<div class="tag">CREATIVE DIGITAL AGENCY</div>
-<h1>YOUR VISION<br><span class="glow">OUR DESIGN.</span></h1>
-<p>We build stunning websites for shops, businesses and brands.</p>
-<a class="btn" href="#designs">Explore Designs ↗</a>
-<a class="btn" href="#order">Start Your Order</a>
-</div>
-
-<section id="designs">
-<h2>Our Creative Designs</h2>
-<p class="sub">Choose a style for your next website.</p>
-<div class="grid">
-<div class="card"><h3>💜 Creative Glow</h3><p>Neon effects, dark backgrounds and a futuristic look.</p></div>
-<div class="card"><h3>🏢 Business Pro</h3><p>Professional layouts for companies and services.</p></div>
-<div class="card"><h3>🛍️ Shop Smart</h3><p>Product showcases for shops and online businesses.</p></div>
-</div>
+<main>
+<section class="wrap hero" id="home">
+ <div>
+  <div class="eyebrow"><span class="dot"></span> CREATIVE WEBSITES • BUDGET FRIENDLY</div>
+  <h1>Your business.<br>Your style.<br><span>Your website.</span></h1>
+  <p>Modern, mobile-friendly websites for shops, creators and small businesses. Choose a package or build a website your own way.</p>
+  <div class="actions"><a class="btn" href="#prices">Explore Packages ↗</a><a class="btn secondary" href="#custom">Build My Website</a></div>
+  <div class="mini-trust"><span>✦ Mobile-friendly layouts</span><span>✦ AI-style demo visuals</span><span>✦ Custom requests welcome</span></div>
+ </div>
+ <div class="showcase" aria-label="Website design preview">
+  <div class="glow"></div>
+  <div class="mock-window"><div class="browserbar"><i></i><i></i><i></i><span>yourbusiness.example</span></div>
+   <div class="mock-content"><div class="mock-hero"><small>YOUR BRAND • YOUR STORY</small><h3>Make your<br>first impression<br><span class="gradient">unforgettable.</span></h3><p>Beautiful design. Clear information. Easy contact.</p><span class="pill">Explore collection ↗</span></div>
+    <div class="mock-tiles"><div class="tile">SHOP</div><div class="tile">SERVICES</div><div class="tile">CONTACT</div></div></div>
+  </div>
+ </div>
 </section>
-
-<section id="pricing">
-<h2>Website Packages</h2>
-<p class="sub">Choose a package and tell us what you need.</p>
-<div class="grid">
-<div class="card"><h3>Starter</h3><p class="price">₹999*</p><ul><li>One-page design</li><li>Mobile-friendly layout</li><li>Contact section</li></ul><a class="btn" href="#order">Choose Starter</a></div>
-<div class="card"><h3>Business</h3><p class="price">₹2,499*</p><ul><li>Up to 4 pages</li><li>Custom styling</li><li>WhatsApp contact link</li></ul><a class="btn" href="#order">Choose Business</a></div>
-<div class="card"><h3>Premium</h3><p class="price">₹4,999*</p><ul><li>Custom multi-page design</li><li>Animations and sections</li><li>Extra customization</li></ul><a class="btn" href="#order">Choose Premium</a></div>
-</div>
-<p class="center" style="margin-top:20px;font-size:12px">*Sample starting prices. Confirm final price, features and hosting before accepting an order.</p>
-</section>
-
-<section id="order">
-<h2>Place Your Order</h2>
-<p class="sub">Tell us about your dream website.</p>
-<form id="orderForm">
-<label>Your Name</label>
-<input id="name" required placeholder="Enter your name">
-<label>Business / Brand Name</label>
-<input id="business" required placeholder="Your business name">
-<label>Choose Package</label>
-<select id="package"><option>Starter</option><option>Business</option><option>Premium</option><option>Custom Website</option></select>
-<label>Website Type</label>
-<select id="type"><option>Business Website</option><option>Online Shop</option><option>Portfolio</option><option>Other</option></select>
-<label>Describe Your Requirements</label>
-<textarea id="details" rows="4" placeholder="Colours, pages and features you need"></textarea>
-<button class="btn" type="submit">Send Order on WhatsApp ↗</button>
-<p style="font-size:12px">WhatsApp will open with your order details. You can review and send the message there.</p>
-</form>
-</section>
-
-<section id="reviews">
-<h2>Client Reviews</h2>
-<p class="sub">Your feedback helps us grow.</p>
-<div class="card center"><h3>⭐ Your Experience Matters</h3><p>After your project is completed, share your honest feedback with us.</p><a class="btn" href="#order">Contact Our Studio</a></div>
-</section>
-
-<footer>
-<div class="logo">PS WEB STUDIO</div>
-<p>YOUR VISION | OUR DESIGN</p>
-<p>Creative websites. Bold ideas. Better online presence.</p>
-<p style="margin-top:12px;font-size:12px">© 2026 PS Web Studio</p>
-</footer>
-
+<section class="section" id="designs"><div class="wrap">
+ <div class="section-head"><div class="kicker">Design inspiration</div><h2>Find a look that fits <span class="gradient">your business</span></h2><p>These are concept previews to help you choose a style. We can customize the colors, sections and layout for your needs.</p></div>
+ <div class="grid">
+  <article class="card"><div class="sample-art shop"><div class="art-label">YOUR SHOP<br>ONLINE</div></div><div class="card-body"><span class="pill">Business</span><h3>Shop & Product Website</h3><p>Show products, offers, business details and ways to contact you.</p><button class="btn small secondary pick-type" data-type="Shop / Business">Choose this style ↗</button></div></article>
+  <article class="card"><div class="sample-art food"><div class="art-label">FRESH.<br>LOCAL. DELICIOUS.</div></div><div class="card-body"><span class="pill">Food & Drink</span><h3>Restaurant Website</h3><p>Menu, food visuals, opening details and inquiry/contact buttons.</p><button class="btn small secondary pick-type" data-type="Restaurant / Cafe">Choose this style ↗</button></div></article>
+  <article class="card"><div class="sample-art port"><div class="art-label">CREATIVE<br>PORTFOLIO</div></div><div class="card-body"><span class="pill">Personal brand</span><h3>Portfolio Website</h3><p>Introduce yourself, highlight work and make it easy to reach you.</p><button class="btn small secondary pick-type" data-type="Portfolio / Creator">Choose this style ↗</button></div></article>
+  <article class="card"><div class="sample-art coach"><div class="art-label">LEARN.<br>GROW. ACHIEVE.</div></div><div class="card-body"><span class="pill">Education</span><h3>Coaching / Classes</h3><p>Courses, class details, features and student inquiry information.</p><button class="btn small secondary pick-type" data-type="Coaching / Education">Choose this style ↗</button></div></article>
+  <article class="card"><div class="sample-art event"><div class="art-label">YOUR MOMENT<br>YOUR STORY</div></div><div class="card-body"><span class="pill">Events</span><h3>Event / Invitation</h3><p>Event information, schedule, location and custom visual theme.</p><button class="btn small secondary pick-type" data-type="Event / Invitation">Choose this style ↗</button></div></article>
+  <article class="card"><div class="sample-art"><div class="art-label">DREAM IT.<br>DESIGN IT.</div></div><div class="card-body"><span class="pill">Custom</span><h3>Something Different?</h3><p>Tell us your idea and request a custom layout or additional pages.</p><button class="btn small secondary pick-type" data-type="Other / Custom idea">Choose this style ↗</button></div></article>
+ </div>
+ <p class="note">Portfolio visuals are illustrative AI-style design concepts, not photographs of real clients or completed customer projects. Actual AI image generation or paid image assets may need separate approval/cost depending on the request.</p>
+</div></section>
+<section class="section" id="prices"><div class="wrap">
+ <div class="section-head"><div class="kicker">Simple starting prices</div><h2>Pick your <span class="gradient">package</span></h2><p>Choose a starting package. Final cost depends on the agreed scope and features.</p></div>
+ <div class="grid price-grid">
+  <article class="card price-card"><span class="pill">STARTER</span><h3>Basic Website</h3><div class="price">₹300 <small>/ starting price</small></div><p class="muted">For a simple online presence.</p><ul><li>One-page basic website</li><li>AI-style illustrative visuals</li><li>Business details & contact section</li><li>Mobile-friendly layout</li><li>Instagram contact button</li></ul><button class="btn secondary choose-package" data-package="Basic Website" data-price="300">Choose Basic</button></article>
+  <article class="card price-card featured"><span class="pill">MOST FLEXIBLE</span><h3>Standard Website</h3><div class="price">₹600 <small>/ starting price</small></div><p class="muted">For more sections and content.</p><ul><li>Multi-section website</li><li>AI-style illustrative visuals</li><li>Products/services gallery</li><li>Custom colors and styling</li><li>Instagram contact button</li></ul><button class="btn choose-package" data-package="Standard Website" data-price="600">Choose Standard ↗</button></article>
+  <article class="card price-card"><span class="pill">CUSTOM</span><h3>Custom Website</h3><div class="price">Up to ₹1,000 <small>/ agreed quote</small></div><p class="muted">For extra pages or a special layout.</p><ul><li>Other page counts/layouts</li><li>Real photos can be included</li><li>Custom sections and design</li><li>Extra features by agreement</li><li>Price confirmed before work</li></ul><button class="btn secondary choose-package" data-package="Custom Website" data-price="1000">Choose Custom</button></article>
+ </div>
+ <div class="note"><b>Photo policy:</b> ₹300 and ₹600 packages use AI-style/illustrative visuals by default. The ₹1,000 custom option can include the customer's real shop/product photos, supplied by the customer. Real-photo editing, AI image generation, domain, paid hosting and complex features may affect the final quote. We will confirm what is included before starting.</div>
+</div></section>
+<section class="section" id="custom"><div class="wrap">
+ <div class="section-head"><div class="kicker">Your idea, your choices</div><h2>Build your own <span class="gradient">website</span></h2><p>Fill in the form. Your selections will be turned into an order message that you can send to us through Instagram DM.</p></div>
+ <div class="builder">
+  <form class="form-panel" id="orderForm">
+   <div class="field"><label for="customerName">Your name *</label><input id="customerName" required placeholder="e.g. Rahul Sharma"></div>
+   <div class="field"><label for="businessName">Business / website name *</label><input id="businessName" required placeholder="e.g. Sharma Mobile Shop"></div>
+   <div class="field"><label for="websiteType">What type of website do you need? *</label><select id="websiteType" required><option value="">Choose a type</option><option>Shop / Business</option><option>Restaurant / Cafe</option><option>Portfolio / Creator</option><option>Coaching / Education</option><option>Event / Invitation</option><option>Personal website</option><option>Other / Custom idea</option></select></div>
+   <div class="field"><label for="package">Choose a package *</label><select id="package" required><option value="">Choose a package</option><option value="Basic Website">Basic Website — ₹300</option><option value="Standard Website">Standard Website — ₹600</option><option value="Custom Website">Custom Website — up to ₹1,000 (quote first)</option><option value="Not sure">Not sure — recommend one</option></select></div>
+   <div class="field"><label for="pages">How many pages/sections?</label><select id="pages"><option>1 page</option><option>2 pages</option><option>3–5 pages/sections</option><option>5+ pages (custom quote)</option><option>Not sure, please suggest</option></select></div>
+   <div class="field"><label>What kind of photos do you prefer?</label><div class="choice-grid">
+    <label class="choice"><input type="radio" name="photos" value="AI-style / illustrative visuals" checked><span><b>AI-style visuals</b><br><span class="muted">Included by default in ₹300/₹600 plans</span></span></label>
+    <label class="choice"><input type="radio" name="photos" value="Real shop/product photos (customer supplied)"><span><b>Real photos</b><br><span class="muted">Custom plan; customer supplies photos</span></span></label>
+    <label class="choice"><input type="radio" name="photos" value="I will decide later"><span><b>Decide later</b><br><span class="muted">Discuss with PS Web Studio</span></span></label>
+    <label class="choice"><input type="radio" name="photos" value="Mix of AI-style visuals and real photos"><span><b>Mix of both</b><br><span class="muted">May change final quote</span></span></label>
+   </div></div>
+   <div class="field"><label>Extra features (select any)</label><div class="choice-grid">
+    <label class="choice"><input type="checkbox" name="features" value="Product / service gallery"><span>Product / service gallery</span></label>
+    <label class="choice"><input type="checkbox" name="features" value="Animations / glow effects"><span>Animations / glow effects</span></label>
+    <label class="choice"><input type="checkbox" name="features" value="Customer reviews section"><span>Customer reviews section</span></label>
+    <label class="choice"><input type="checkbox" name="features" value="Map / location section"><span>Map / location section</span></label>
+    <label class="choice"><input type="checkbox" name="features" value="Contact / inquiry form"><span>Contact / inquiry form</span></label>
+    <label class="choice"><input type="checkbox" name="features" value="Other custom feature"><span>Other custom feature</span></label>
+   </div></div>
+   <div class="field"><label for="colors">Preferred colors / style</label><input id="colors" placeholder="e.g. black and gold, clean, luxury"></div>
+   <div class="field"><label for="details">Tell us your idea or any changes</label><textarea id="details" placeholder="What should the website show? Any example or special request?"></textarea></div>
+   <div class="field"><label for="budget">Your budget (optional)</label><select id="budget"><option>Not specified</option><option>₹300</option><option>₹600</option><option>Up to ₹1,000</option><option>Need a quote first</option></select></div>
+   <button type="submit" class="btn" style="width:100%">Prepare My Instagram Order ↗</button>
+   <p class="tiny">No order is sent automatically. Review the summary, then tap the Instagram button and send the message yourself.</p>
+  </form>
+  <aside class="summary" id="orderSummary">
+   <h3>📋 Your order summary</h3><p class="muted" style="font-size:13px">Your selections will appear here.</p>
+   <div class="sumrow"><span>Package</span><b id="sumPackage">Not selected</b></div>
+   <div class="sumrow"><span>Starting price</span><b id="sumPrice">—</b></div>
+   <div class="sumrow"><span>Website type</span><b id="sumType">Not selected</b></div>
+   <div class="sumrow"><span>Photos</span><b id="sumPhotos">AI-style visuals</b></div>
+   <div class="sumtotal"><span>Estimate</span><span id="sumTotal">—</span></div>
+   <p class="tiny">Final price and delivery time are confirmed after reviewing your requirements.</p>
+   <button type="button" id="copyOrder" class="btn secondary">Copy Order Summary</button>
+   <a class="btn" id="instagramOrder" href="https://www.instagram.com/piyush_web_studio_2026/" target="_blank" rel="noopener">Open Instagram DM ↗</a>
+   <p class="tiny">Instagram: @piyush_web_studio_2026</p>
+  </aside>
+ </div>
+</div></section>
+<section class="section" id="process"><div class="wrap">
+ <div class="section-head"><div class="kicker">Easy process</div><h2>From idea to <span class="gradient">live website</span></h2><p>Simple steps, with the scope and price agreed before work starts.</p></div>
+ <div class="grid">
+  <article class="step"><div class="stepno">01</div><h3>Send your requirements</h3><p>Choose a package and prepare your order summary, then send it through Instagram DM.</p></article>
+  <article class="step"><div class="stepno">02</div><h3>Confirm the plan</h3><p>We discuss the design, photos, price, delivery estimate and included changes before beginning.</p></article>
+  <article class="step"><div class="stepno">03</div><h3>Review the draft</h3><p>Review the preview and send your agreed revisions through Instagram DM.</p></article>
+  <article class="step"><div class="stepno">04</div><h3>Publish and share</h3><p>After approval, the live website link is shared with you. Hosting/domain terms are confirmed in advance.</p></article>
+  <article class="step"><div class="stepno">05</div><h3>Request future changes</h3><p>Message the website link and requested edits on Instagram. Extra work may cost extra depending on the request.</p></article>
+  <article class="step"><div class="stepno">06</div><h3>Know what is included</h3><p>We confirm included revision rounds, delivery time, hosting and any additional fees before work starts.</p></article>
+ </div>
+</div></section>
+<section class="section" id="faq"><div class="wrap"><div class="section-head"><div class="kicker">Helpful answers</div><h2>Frequently asked <span class="gradient">questions</span></h2></div>
+ <div class="faq">
+  <details><summary>How do I place an order?</summary><p>Fill out the Build Your Own Website form, review the generated summary, copy it if needed, open Instagram and send the order details to @piyush_web_studio_2026. Your order is received only after you send the DM.</p></details>
+  <details><summary>Are the package photos real?</summary><p>The ₹300 and ₹600 packages use AI-style/illustrative visuals by default. The ₹1,000 custom option can include real shop or product photos supplied by the customer. Photo editing or special image generation may change the quote.</p></details>
+  <details><summary>Can I ask for a different design?</summary><p>Yes. Use the custom form and describe your preferred colors, layout, pages and features. We will confirm whether it fits the selected package or needs a custom quote.</p></details>
+  <details><summary>Can I ask for changes after the website is made?</summary><p>Yes. Send the live website link and a clear list of changes through Instagram DM. The number of included revision rounds and any extra charges should be agreed before work begins.</p></details>
+  <details><summary>Is a domain name included?</summary><p>A free hosting link may be possible, depending on the hosting setup. A custom domain (like yourbusiness.com), paid hosting or paid third-party services are not automatically included and may cost extra.</p></details>
+  <details><summary>Do you accept payments on this website?</summary><p>This site currently collects requirements only; it does not take payments or automatically store orders. Payment method and any advance payment should be agreed in Instagram chat before work starts.</p></details>
+ </div>
+</div></section>
+<section class="section"><div class="wrap"><div class="contact"><div><div class="kicker">Let's build something great</div><h2>Have an idea? Let's make it real.</h2><p class="muted">Tell us what your business needs. We'll discuss the best option for your budget.</p></div><a class="btn" href="https://www.instagram.com/piyush_web_studio_2026/" target="_blank" rel="noopener">Chat on Instagram ↗</a></div></div></section>
+</main>
+<footer><div class="wrap footerin"><div><b style="color:#fff">PS WEB STUDIO</b><br>YOUR VISION | OUR DESIGN</div><div>Instagram: <a href="https://www.instagram.com/piyush_web_studio_2026/" target="_blank" rel="noopener" style="color:#d9bcff">@piyush_web_studio_2026</a><br>© <span id="year"></span> PS Web Studio</div></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
-document.getElementById('orderForm').addEventListener('submit',function(e){
-e.preventDefault();
-const phone=prompt('Enter your WhatsApp number with country code, without + sign (example: 91XXXXXXXXXX):');
-if(!phone||!/^\d{10,15}$/.test(phone)){alert('Please enter a valid WhatsApp number with country code.');return;}
-const msg='PS WEB STUDIO - NEW WEBSITE ORDER%0AName: '+encodeURIComponent(document.getElementById('name').value)+'%0ABusiness: '+encodeURIComponent(document.getElementById('business').value)+'%0APackage: '+encodeURIComponent(document.getElementById('package').value)+'%0AWebsite Type: '+encodeURIComponent(document.getElementById('type').value)+'%0ADetails: '+encodeURIComponent(document.getElementById('details').value);
-window.open('https://wa.me/'+phone+'?text='+msg,'_blank');
+const $=id=>document.getElementById(id);
+const packagePrices={"Basic Website":300,"Standard Website":600,"Custom Website":1000,"Not sure":null};
+function currentPhotos(){return document.querySelector('input[name="photos"]:checked')?.value||"AI-style / illustrative visuals"}
+function priceFor(){const p=$("package").value;return packagePrices[p]}
+function updateSummary(){
+ const p=$("package").value, price=priceFor(), type=$("websiteType").value||"Not selected";
+ $("sumPackage").textContent=p||"Not selected";
+ $("sumPrice").textContent=price===null||price===undefined?"Quote first":"₹"+price;
+ $("sumType").textContent=type;
+ $("sumPhotos").textContent=currentPhotos();
+ $("sumTotal").textContent=price===null||price===undefined?"To be confirmed":"₹"+price+(p==="Custom Website"?" (maximum starting quote)":" starting");
+}
+["package","websiteType"].forEach(id=>$(id).addEventListener("change",updateSummary));
+document.querySelectorAll('input[name="photos"]').forEach(el=>el.addEventListener("change",updateSummary));
+document.querySelectorAll(".choose-package").forEach(btn=>btn.addEventListener("click",()=>{$("package").value=btn.dataset.package;$("websiteType").scrollIntoView({behavior:"smooth",block:"center"});updateSummary();$("custom").scrollIntoView({behavior:"smooth"});}));
+document.querySelectorAll(".pick-type").forEach(btn=>btn.addEventListener("click",()=>{$("websiteType").value=btn.dataset.type;$("custom").scrollIntoView({behavior:"smooth"});updateSummary();}));
+let latestOrder="";
+function makeOrder(){
+ const features=[...document.querySelectorAll('input[name="features"]:checked')].map(x=>x.value);
+ const p=$("package").value, price=priceFor();
+ const priceText=price===null||price===undefined?"Please suggest a suitable package":(p==="Custom Website"?"Up to ₹1,000; confirm quote first":"₹"+price+" starting price");
+ return `🌐 PS WEB STUDIO — NEW WEBSITE INQUIRY\n\nName: ${$("customerName").value.trim()}\nBusiness/Website: ${$("businessName").value.trim()}\nWebsite type: ${$("websiteType").value}\nPackage: ${p}\nStarting price: ${priceText}\nPages: ${$("pages").value}\nPhoto preference: ${currentPhotos()}\nExtra features: ${features.length?features.join(", "):"None selected"}\nPreferred style: ${$("colors").value.trim()||"Open to suggestions"}\nBudget: ${$("budget").value}\nRequirements: ${$("details").value.trim()||"No extra details"}\n\nPlease review my requirements and confirm the final price, delivery time and included revisions.`;
+}
+$("orderForm").addEventListener("input",updateSummary);
+$("orderForm").addEventListener("submit",async e=>{
+ e.preventDefault();
+ latestOrder=makeOrder();
+ try{await navigator.clipboard.writeText(latestOrder);showToast("Order summary copied! Instagram will open next. Paste the message in your DM and tap Send.");}
+ catch(err){showToast("Order summary prepared. Tap Copy Order Summary, then paste it into Instagram DM.");}
+ window.open("https://www.instagram.com/piyush_web_studio_2026/","_blank","noopener");
 });
+$("copyOrder").addEventListener("click",async()=>{
+ latestOrder=makeOrder();
+ try{await navigator.clipboard.writeText(latestOrder);showToast("Order summary copied. Now open Instagram and paste it into your DM.");}
+ catch(e){showToast("Automatic copy isn't supported in this browser. Submit the form or select and copy the summary manually.");}
+});
+function showToast(message){const t=$("toast");t.textContent=message;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),5000)}
+$("year").textContent=new Date().getFullYear();
+updateSummary();
 </script>
 </body>
 </html>
