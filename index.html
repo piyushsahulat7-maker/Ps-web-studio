@@ -1,240 +1,119 @@
-<!DOCTYPE html>
-<html lang="hi">
+<!doctype html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#050507">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23050507'/%3E%3Cpath d='M9 12h46v40H9z' fill='none' stroke='%23b9abff' stroke-opacity='.75' stroke-width='1.5'/%3E%3Ctext x='32' y='40' font-family='Arial,sans-serif' font-size='23' font-weight='700' text-anchor='middle' fill='%23eeeef2'%3EPS%3C/text%3E%3C/svg%3E">
-<title>PS Web Studio | Modern Websites for Your Business</title>
-<meta name="description" content="PS Web Studio creates modern, mobile-friendly websites for shops, salons, creators and local businesses. Packages start at ₹600.">
-<meta property="og:title" content="PS Web Studio — Your Vision, Our Design">
-<meta property="og:description" content="Modern websites for businesses, portfolios and landing pages.">
+<meta name="description" content="PS Web Studio creates modern websites, landing pages and digital experiences for businesses and creators.">
+<meta property="og:title" content="PS Web Studio — Designed in glass">
+<meta property="og:description" content="Thoughtful websites and digital experiences, built with intention.">
 <meta property="og:type" content="website">
-
-<style>
-:root{--ink:#17151d;--muted:#706d78;--purple:#7654e8;--pink:#ed8fd0;--line:#e9e6ef;--soft:#f8f6ff;--white:#fff;--radius:22px}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:86px}
-body{margin:0;background:var(--white);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.6}
-a{color:inherit;text-decoration:none}
-button,input,select,textarea{font:inherit}
-img{max-width:100%;display:block}
-.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
-header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);backdrop-filter:blur(16px);border-bottom:1px solid rgba(233,230,239,.8)}
-.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:9px;font-weight:700;letter-spacing:-.035em;font-size:16px}
-.logo{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;color:#fff;font-weight:900;background:linear-gradient(135deg,#7050e5,#b66cf2 58%,#ef91cb);box-shadow:0 8px 22px #8b63e638}
-.navlinks{display:flex;align-items:center;gap:25px;color:#56515f;font-size:14px}
-.navlinks a:hover{color:var(--purple)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;border-radius:999px;padding:13px 21px;font-weight:700;font-size:14px;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn-primary{background:linear-gradient(110deg,#7654e8,#a56be9);color:white;box-shadow:0 10px 24px #7654e82b}
-.btn-light{border-color:var(--line);background:#fff}
-.menu-btn{display:none;background:white;border:1px solid var(--line);border-radius:12px;padding:8px 12px}
-.hero{position:relative;overflow:hidden;padding:86px 0 72px;background:radial-gradient(ellipse at 82% 10%,#f5e6ff 0,transparent 36%),radial-gradient(ellipse at 8% 70%,#fcecf7 0,transparent 32%),#fff}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:55px;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid #e9defd;background:#fff;border-radius:999px;padding:7px 12px;color:#6746cf;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-.eyebrow span{width:7px;height:7px;border-radius:50%;background:#9b70ee}
-h1{font-size:clamp(43px,6vw,72px);line-height:1.03;letter-spacing:-.065em;margin:22px 0 20px;font-weight:800}
-.gradient-text{background:linear-gradient(100deg,#6d4ae0,#ba66c8 65%,#e48ebc);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{font-size:17px;color:var(--muted);max-width:560px;margin:0 0 28px}
-.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-.trust{display:flex;gap:20px;flex-wrap:wrap;margin-top:28px;color:#77717f;font-size:12px}
-.trust span:before{content:"✓";color:#7654e8;font-weight:900;margin-right:7px}
-.preview{position:relative;min-height:390px;border:1px solid #eee8f6;border-radius:30px;padding:18px;background:linear-gradient(145deg,#faf7ff,#fff 60%,#fff4fb);box-shadow:0 25px 70px #47316a12;transform:rotate(1deg)}
-.preview-top{display:flex;gap:6px;padding:3px 4px 17px;border-bottom:1px solid #eee8f4}
-.preview-top i{width:8px;height:8px;border-radius:50%;background:#d7c8ef}
-.mock-site{margin:22px auto 0;max-width:330px;background:#fff;border:1px solid #f0edf5;border-radius:18px;padding:22px;box-shadow:0 12px 35px #2b1c4b0b}
-.mock-logo{font-size:11px;font-weight:900;letter-spacing:.1em;color:#7b5ae7}
-.mock-title{font-size:29px;line-height:1.08;letter-spacing:-.05em;font-weight:800;margin:18px 0 10px}
-.mock-copy{font-size:10px;color:#8b8792;max-width:210px}
-.mock-pill{display:inline-block;margin-top:15px;background:#7654e8;color:#fff;border-radius:20px;padding:8px 13px;font-size:10px}
-.mock-image{height:100px;border-radius:13px;margin-top:17px;background:linear-gradient(130deg,#d8caff,#f7d6eb 55%,#fff0d8);position:relative;overflow:hidden}
-.mock-image:before,.mock-image:after{content:"";position:absolute;border-radius:50%;background:#fff9;filter:blur(1px)}
-.mock-image:before{width:110px;height:110px;right:28px;top:20px}
-.mock-image:after{width:60px;height:60px;right:65px;top:5px;background:#b39ce9aa}
-.float-tag{position:absolute;padding:13px 16px;background:#fff;border:1px solid #eee8f5;border-radius:16px;box-shadow:0 12px 35px #2b1c4b12;font-size:12px;font-weight:800}
-.tag-one{left:-22px;bottom:46px}.tag-two{right:-15px;top:78px;color:#7954dc}
-section.content{padding:78px 0}
-.section-head{text-align:center;max-width:660px;margin:0 auto 38px}
-.kicker{color:#7955df;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.13em}
-h2{font-size:clamp(30px,4vw,46px);letter-spacing:-.055em;line-height:1.1;margin:12px 0}
-.section-head p{color:var(--muted);margin:13px auto 0;max-width:540px}
-.template-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.template{border:1px solid var(--line);border-radius:20px;padding:13px;transition:transform .2s,box-shadow .2s}
-.template:hover{transform:translateY(-5px);box-shadow:0 18px 42px #2d1c4d0c}
-.template-art{height:190px;border-radius:13px;overflow:hidden;padding:18px;position:relative}
-.art-shop{background:linear-gradient(135deg,#fff0dc,#f7cda9)}
-.art-salon{background:linear-gradient(135deg,#e8e1ff,#c8c3f6)}
-.art-portfolio{background:linear-gradient(135deg,#dff4ec,#b6e3d6)}
-.art-label{font-size:10px;font-weight:900;letter-spacing:.13em}
-.art-title{font-size:25px;line-height:1.02;letter-spacing:-.05em;font-weight:850;max-width:180px;margin-top:25px}
-.art-button{display:inline-block;font-size:9px;background:#fff;padding:7px 10px;border-radius:20px;margin-top:12px}
-.art-circle{position:absolute;width:125px;height:125px;border-radius:50%;right:-15px;bottom:-28px;background:#fff8}
-.template h3{margin:15px 5px 4px;font-size:17px}
-.template p{margin:0 5px 9px;color:var(--muted);font-size:13px}
-.template .choose{margin:4px}
-.soft-section{background:var(--soft)}
-.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-.feature{padding:10px 5px}
-.feature-num{font-size:12px;color:#8b70df;font-weight:900;letter-spacing:.1em}
-.feature h3{margin:12px 0 7px;font-size:19px;letter-spacing:-.03em}
-.feature p{margin:0;color:var(--muted);font-size:14px}
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
-.price-card{border:1px solid var(--line);border-radius:22px;padding:26px;background:#fff;display:flex;flex-direction:column;position:relative}
-.price-card.popular{border:1.5px solid #9b7beb;box-shadow:0 18px 50px #7654e815}
-.popular-label{position:absolute;right:18px;top:17px;background:#f1eaff;color:#704bd5;border-radius:20px;padding:5px 9px;font-size:10px;font-weight:900}
-.plan{font-size:13px;font-weight:800;color:#6e6878}
-.price{font-size:45px;letter-spacing:-.06em;font-weight:850;margin:8px 0 0}
-.price small{font-size:13px;letter-spacing:0;color:var(--muted);font-weight:500}
-.price-desc{color:var(--muted);font-size:13px;min-height:42px}
-.price-card ul{padding:0;list-style:none;margin:14px 0 24px;flex:1}
-.price-card li{font-size:13px;margin:11px 0;color:#4e4a56}
-.price-card li:before{content:"✓";color:#7955df;font-weight:900;margin-right:9px}
-.price-card .btn{width:100%}
-.note{text-align:center;color:var(--muted);font-size:12px;margin-top:20px}
-.order-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:start}
-.order-copy p{color:var(--muted)}
-.order-copy .contact-handle{display:inline-block;margin-top:12px;color:#7654e8;font-weight:800}
-.order-form{border:1px solid var(--line);border-radius:24px;padding:26px;background:#fff;box-shadow:0 15px 45px #21153608}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.field{margin-bottom:15px}
-.field label{display:block;font-size:12px;font-weight:800;margin-bottom:7px}
-.field input,.field select,.field textarea{width:100%;border:1px solid #e6e1ed;border-radius:12px;padding:12px 13px;outline:none;background:#fff;color:var(--ink)}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:#9c81eb;box-shadow:0 0 0 3px #7654e815}
-.field textarea{min-height:100px;resize:vertical}
-.form-note{font-size:11px;color:var(--muted);margin:12px 0 0}
-.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.review{border:1px solid var(--line);border-radius:18px;padding:22px;background:#fff}
-.stars{color:#a278e8;letter-spacing:3px;font-size:13px}
-.review p{color:#625d6a;font-size:14px}
-.review strong{font-size:13px}
-.review small{display:block;color:#8a8492;margin-top:2px}
-.cta{padding:52px;border-radius:28px;background:linear-gradient(110deg,#f4efff,#fff1fa);display:flex;align-items:center;justify-content:space-between;gap:25px}
-.cta h2{font-size:clamp(28px,4vw,42px);margin:0}
-.cta p{color:var(--muted);margin:10px 0 0}
-footer{padding:32px 0;border-top:1px solid var(--line)}
-.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-footer p{font-size:12px;color:var(--muted);margin:0}
-.footer-links{display:flex;gap:18px;font-size:12px;color:var(--muted)}
-
-/* Facet glass hero */
-.facet-hero{position:relative;isolation:isolate;overflow:hidden;background:#050507;color:#eeeef2;min-height:clamp(650px,calc(100svh - 76px),1000px);display:grid;place-items:center;padding:clamp(22px,5vh,54px) 0}
-.facet-stage{width:89%;max-width:1730px;min-height:min(78vh,850px);margin:auto;perspective:1400px;transform-style:preserve-3d;position:relative}
-.facet-nav{height:clamp(66px,10.8vh,92px);min-height:66px;border:1px solid #ffffff20;background:linear-gradient(120deg,#202025ed,#111116f2);box-shadow:inset 0 1px #ffffff22,0 18px 60px #0009;display:flex;align-items:center;justify-content:space-between;padding:0 4.2%;position:relative;z-index:3;transform-style:preserve-3d;border-radius:3px}
-.facet-brand{display:flex;align-items:center;gap:10px;font-size:16px;font-weight:700;letter-spacing:-.03em}
-.facet-mark{width:13px;height:13px;border-radius:4px;background:linear-gradient(135deg,#d9d2ff,#8d78ff);box-shadow:0 0 22px #9b8aff99}
-.facet-nav nav{display:flex;gap:clamp(16px,3vw,42px);font-size:12px;color:#aaa9b2}
-.facet-nav nav a:hover{color:#fff}
-.facet-signin{font-size:12px;color:#d8d7df;border:1px solid #ffffff2b;padding:10px 15px;border-radius:2px}
-.facet-signin span{margin-left:8px;color:#b9abff}
-.facet-panel{position:relative;min-height:min(70vh,730px);overflow:hidden;margin-top:12px;background:radial-gradient(ellipse at 50% 45%,#24232b 0,#111116 48%,#08080b 100%);border:1px solid #ffffff1c;box-shadow:inset 0 1px #ffffff12,0 35px 90px #000b;transform-style:preserve-3d}
-#facetCanvas{position:absolute;inset:0;width:100%;height:100%;display:block}
-.facet-copy{position:absolute;z-index:2;left:clamp(28px,8vw,130px);top:50%;transform:translateY(-50%);max-width:560px;pointer-events:none}
-.facet-copy>*{pointer-events:auto}
-.facet-eyebrow{font-size:10px;letter-spacing:.2em;color:#b9abff;font-weight:800}
-.facet-copy h1{font-size:clamp(58px,9vw,124px);line-height:.87;letter-spacing:-.085em;margin:24px 0;font-weight:750;color:#f2f0fa}
-.facet-copy p{font-size:clamp(13px,1.3vw,16px);line-height:1.7;color:#aaa8b4;max-width:420px}
-.facet-actions{display:flex;align-items:center;gap:12px;margin-top:30px}
-.facet-open,.facet-paper{padding:13px 19px;border-radius:2px;font-size:12px;font-weight:700}
-.facet-open{background:#eeeafc;color:#17151e}
-.facet-paper{border:1px solid #ffffff30;background:#ffffff08;color:#e6e3ee;cursor:pointer}
-.facet-meta{display:flex;gap:26px;margin-top:clamp(45px,8vh,90px);font-size:9px;letter-spacing:.12em;color:#777580}
-.facet-definitions{display:none;position:absolute;z-index:5;inset:0;background:#09090d;padding:clamp(28px,7vw,100px);color:#eeeef2;overflow:auto}
-.facet-definitions.open{display:block}
-.facet-definition-copy{max-width:760px}
-.facet-definition-copy h2{font-size:clamp(35px,6vw,68px);letter-spacing:-.06em;margin:0 0 30px}
-.facet-definition-copy p{color:#aaa8b4;line-height:1.8;margin:18px 0}
-.facet-definition-copy strong{color:#d3caff}
-.facet-back{margin-top:25px;border:1px solid #ffffff35;background:transparent;color:#fff;padding:12px 18px;cursor:pointer}
-.facet-fallback{position:absolute;inset:0;background:radial-gradient(circle at 70% 45%,#4b416a,#17151d 45%,#08080b);pointer-events:none}
-body:has(.facet-definitions.open){overflow:hidden}
-
-/* Dark theme */
-body{background:#08080b;color:#eeeef2}
-header{background:#0c0c10ef;border-color:#ffffff1c}
-.brand{color:#eeeef2}
-.navlinks{color:#aaa8b4}
-.menu-btn{background:#141419;color:#eeeef2;border-color:#ffffff30}
-.btn-light{background:#17171d;color:#eeeef2;border-color:#ffffff25}
-.content{background:#09090d;color:#eeeef2}
-.soft-section{background:#101015}
-.section-head p,.feature p,.template p,.order-copy p,.note{color:#aaa8b4}
-.template,.price-card,.review,.order-form{background:#141419;border-color:#ffffff20}
-.template h3,.feature h3,.price-card li,.review strong{color:#e9e7f0}
-.price-card li:before{color:#b9abff}
-.popular-label{background:#2b2540;color:#d3caff}
-.plan{color:#b9abff}
-.price-desc,.price small{color:#aaa8b4}
-.order-copy .contact-handle{color:#c4b8ff}
-.field label{color:#e8e5ef}
-.field input,.field select,.field textarea{background:#0d0d12;color:#eeeef2;border-color:#ffffff26}
-.field input::placeholder,.field textarea::placeholder{color:#777681}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:#aaa0d6;box-shadow:0 0 0 3px #b9abff20}
-.review p{color:#c0bec8}
-.review small,footer p,.footer-links{color:#9998a2}
-.cta{background:linear-gradient(110deg,#202027,#141218);border:1px solid #ffffff20}
-footer{border-color:#ffffff20}
-@media(max-width:800px){.navlinks{background:#111115;border-color:#ffffff25;box-shadow:0 15px 35px #000b;}}
-@media(max-width:700px){.facet-stage{width:94%;min-height:78vh}.facet-nav{padding:0 4%}.facet-nav nav{gap:13px}.facet-nav nav a{font-size:10px}.facet-signin{padding:8px 10px;font-size:10px}.facet-panel{min-height:70vh}.facet-copy{left:7%;right:7%}.facet-copy h1{font-size:clamp(58px,15vw,94px)}.facet-meta{gap:12px;flex-wrap:wrap}.facet-wide{display:none}}
-@media(max-width:420px){.facet-nav nav{gap:9px}.facet-nav nav a{font-size:9px}.facet-brand{font-size:13px}.facet-mark{width:10px;height:10px}.facet-signin{font-size:9px;padding:7px}}
-@media(max-width:800px){.navlinks{display:none;position:absolute;left:20px;right:20px;top:68px;background:#111115;border:1px solid #ffffff25;border-radius:16px;padding:18px;box-shadow:0 15px 35px #000b;flex-direction:column;align-items:flex-start;gap:16px}.navlinks.open{display:flex}.menu-btn{display:block}.nav>.btn{display:none}.hero{padding:58px 0 54px}.hero-grid{grid-template-columns:1fr;gap:38px}.preview{max-width:480px;width:100%;margin:auto;min-height:350px}.template-grid,.pricing-grid,.feature-grid,.review-grid{grid-template-columns:1fr 1fr}.order-grid{grid-template-columns:1fr;gap:22px}.cta{padding:32px;align-items:flex-start;flex-direction:column}}
-@media(max-width:540px){.wrap{width:min(100% - 30px,1120px)}.template-grid,.pricing-grid,.feature-grid,.review-grid{grid-template-columns:1fr}.hero p{font-size:15px}.preview{min-height:330px;padding:13px}.mock-site{padding:18px}.float-tag{font-size:10px}.tag-one{left:-5px}.tag-two{right:-4px}.content{padding:58px 0!important}.form-row{grid-template-columns:1fr;gap:0}.order-form{padding:19px}.cta{padding:25px}.trust{gap:10px 15px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
-</style>
-
+<title>PS Web Studio — Designed in glass</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23050507'/%3E%3Cpath d='M13 47V17h19c10 0 16 5 16 14S42 45 32 45h-9v2z' fill='none' stroke='%23c9b8ff' stroke-width='3'/%3E%3Ctext x='31' y='38' text-anchor='middle' font-family='Arial' font-size='16' font-weight='700' fill='%23f4f1fa'%3EPS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script type="importmap">
 {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"}}
 </script>
+<style>
+:root{color-scheme:dark;--bg:#050507;--surface:#0c0b11;--surface2:#111019;--text:#f4f1fa;--muted:#a7a1b4;--line:rgba(226,216,255,.15);--lav:#c9b8ff;--lav2:#a58cff;--max:1160px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55;overflow-x:hidden}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button,a{-webkit-tap-highlight-color:transparent}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+.noise{position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.025;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E")}
+.site-header{height:74px;position:relative;z-index:30;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(5,5,7,.82);backdrop-filter:blur(18px)}.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:700;letter-spacing:.035em}.brand-mark{width:31px;height:31px;border:1px solid #c9b8ff88;border-radius:9px;display:grid;place-items:center;color:var(--lav);font-size:11px;letter-spacing:-.06em;background:#09080d}.nav-links{display:flex;align-items:center;gap:27px;color:#c5c0ce;font-size:12px}.nav-links a:hover{color:#fff}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid var(--line);border-radius:999px;padding:11px 17px;font-size:12px;font-weight:650;transition:.25s;background:rgba(255,255,255,.04);color:var(--text);cursor:pointer}.nav-cta:hover,.btn:hover{border-color:var(--lav);transform:translateY(-2px)}.btn.primary{background:var(--lav);color:#171220;border-color:var(--lav)}.btn.primary:hover{background:#ded4ff}.menu-btn{display:none;background:none;border:1px solid var(--line);color:#fff;border-radius:10px;padding:8px 11px}
+.facet-hero{min-height:calc(100svh - 74px);padding:clamp(20px,4vh,42px) 0 46px;display:grid;place-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 43%,#17141f 0,#09090d 45%,#050507 78%);isolation:isolate}.facet-hero:before{content:"";position:absolute;width:70vw;height:70vw;max-width:950px;max-height:950px;left:50%;top:48%;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(144,119,213,.13),transparent 68%);z-index:-1}.facet-stage{width:min(1460px,92%);margin:auto;perspective:1400px;transform-style:preserve-3d}.facet-nav{height:clamp(62px,9vh,82px);display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,4vw,56px);border:1px solid #ffffff20;background:linear-gradient(120deg,rgba(35,34,42,.92),rgba(15,15,20,.96));box-shadow:inset 0 1px #ffffff20,0 18px 60px #0008;border-radius:3px;position:relative;z-index:2}.facet-brand{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:-.02em}.facet-mark{width:11px;height:11px;border-radius:3px;background:linear-gradient(135deg,#eeeaff,#8e78ff);box-shadow:0 0 18px #a18affaa}.facet-nav-links{display:flex;gap:clamp(15px,3vw,38px);font-size:11px;color:#aaa8b3}.facet-nav-links a:hover{color:#fff}.facet-contact{font-size:11px;color:#e4e1eb;border:1px solid #ffffff2c;padding:9px 13px;border-radius:2px}.facet-contact span{color:var(--lav);margin-left:7px}.facet-panel{position:relative;height:min(74vh,760px);min-height:500px;margin-top:11px;overflow:hidden;border:1px solid #ffffff1c;background:radial-gradient(ellipse at 62% 48%,#292431 0,#14131a 42%,#08080b 100%);box-shadow:inset 0 1px #ffffff12,0 34px 90px #000b;transform-style:preserve-3d}.facet-panel:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(110deg,rgba(255,255,255,.025),transparent 35%,rgba(255,255,255,.018))}#facetCanvas{position:absolute;inset:0;width:100%;height:100%;display:block;z-index:1;touch-action:pan-y}.facet-fallback{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse at 70% 48%,#55466f 0,#211d2c 30%,transparent 65%)}.facet-copy{position:absolute;z-index:3;left:clamp(25px,8vw,125px);top:50%;transform:translateY(-50%);max-width:560px;pointer-events:none}.facet-copy>*{pointer-events:auto}.facet-eyebrow{font-size:9px;letter-spacing:.22em;color:#c5b7ff;font-weight:700}.facet-copy h1{font-size:clamp(58px,9.5vw,126px);line-height:.86;letter-spacing:-.09em;margin:24px 0 22px;font-weight:650;color:#f4f1fa}.facet-copy h1 span{font-family:Georgia,serif;font-style:italic;font-weight:400;color:#c9b8ff}.facet-copy p{font-size:clamp(12px,1.25vw,15px);line-height:1.75;color:#aaa7b5;max-width:405px}.facet-actions{display:flex;gap:10px;align-items:center;margin-top:28px}.facet-open,.facet-paper{display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border-radius:2px;font-size:11px;font-weight:700}.facet-open{background:#eeeafc;color:#17151e}.facet-paper{border:1px solid #ffffff35;background:#ffffff08;color:#f0edf8;cursor:pointer}.facet-paper:hover{background:#ffffff15}.facet-meta{display:flex;gap:24px;flex-wrap:wrap;margin-top:clamp(35px,7vh,72px);font-size:8px;letter-spacing:.15em;color:#777482;text-transform:uppercase}.facet-definitions{position:absolute;inset:0;z-index:5;display:none;overflow:auto;padding:clamp(28px,7vw,95px);background:rgba(8,8,12,.96);backdrop-filter:blur(22px)}.facet-definitions.open{display:block;animation:fadeIn .35s ease both}.definition-inner{max-width:780px}.definition-kicker{font-size:9px;letter-spacing:.2em;color:var(--lav);margin-bottom:20px}.facet-definitions h2{font-size:clamp(35px,6vw,70px);line-height:.98;letter-spacing:-.07em;margin:0 0 35px}.definition-list{display:grid;grid-template-columns:1fr 1fr;gap:22px 34px}.definition-item{border-top:1px solid #ffffff20;padding-top:14px}.definition-item strong{display:block;color:#d4c9ff;font-size:13px;margin-bottom:6px}.definition-item p{color:#aaa7b5;font-size:12px;line-height:1.75;margin:0}.facet-back{margin-top:35px;border:1px solid #ffffff35;background:transparent;color:#fff;padding:11px 16px;cursor:pointer;border-radius:2px;font-size:11px}.facet-back:hover{border-color:var(--lav)}@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+section.content{padding:92px 0;border-top:1px solid rgba(255,255,255,.07);background:#08080b}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}.kicker{font-size:9px;letter-spacing:.2em;color:var(--lav);text-transform:uppercase}.section-head h2{font-size:clamp(32px,4vw,51px);line-height:1.03;letter-spacing:-.07em;font-weight:550;margin:12px 0 0}.section-head>p{max-width:355px;color:var(--muted);font-size:12px;margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.card{border:1px solid var(--line);border-radius:17px;padding:24px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.016));min-height:185px;transition:.25s}.card:hover{transform:translateY(-4px);border-color:#c9b8ff66}.card-no{font-size:9px;letter-spacing:.14em;color:var(--lav)}.card h3{font-size:18px;letter-spacing:-.04em;margin:23px 0 7px}.card p{font-size:12px;color:var(--muted);margin:0}.price-card{min-height:290px;display:flex;flex-direction:column}.price{font-size:34px;letter-spacing:-.06em;margin:16px 0 4px}.price small{font-size:10px;color:var(--muted);letter-spacing:0}.price-card ul{padding-left:16px;color:var(--muted);font-size:11px;line-height:2;margin:12px 0 22px}.price-card .btn{margin-top:auto;align-self:flex-start}.featured{border-color:#c9b8ff77;background:linear-gradient(145deg,rgba(155,126,231,.16),rgba(255,255,255,.025))}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px}.contact-copy h2{font-size:clamp(34px,5vw,58px);line-height:.98;letter-spacing:-.07em;margin:16px 0}.contact-copy p{color:var(--muted);font-size:12px}.contact-copy a{color:var(--lav)}.form{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:9px;color:#aaa3b6;letter-spacing:.08em}.field input,.field textarea,.field select{width:100%;border:1px solid var(--line);border-radius:10px;background:#0c0b11;color:white;padding:12px;font-size:12px;outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--lav)}.field textarea{min-height:100px;resize:vertical}.form-note{grid-column:1/-1;color:#81798d;font-size:10px}.form .btn{grid-column:1/-1;justify-self:start}footer{border-top:1px solid var(--line);padding:25px 0;color:#817b8c;font-size:10px}.foot{display:flex;justify-content:space-between;gap:18px;align-items:center}.foot strong{color:#d8d2e4;font-weight:600}
+@media(max-width:760px){.wrap{width:min(100% - 32px,var(--max))}.nav-links{display:none;position:absolute;top:65px;left:16px;right:16px;padding:17px;background:#111019;border:1px solid var(--line);border-radius:14px;flex-direction:column;align-items:flex-start;gap:16px}.nav-links.open{display:flex}.menu-btn{display:block}.nav-cta{display:none}.facet-stage{width:95%}.facet-nav{padding:0 4%}.facet-nav-links{gap:13px}.facet-nav-links a{font-size:9px}.facet-contact{font-size:9px;padding:7px 9px}.facet-panel{height:70vh;min-height:490px}.facet-copy{left:7%;right:6%}.facet-copy h1{font-size:clamp(58px,14vw,96px)}.facet-meta{gap:12px}.section-head{display:block}.section-head>p{margin-top:15px}.cards{grid-template-columns:1fr}.card{min-height:150px}.price-card{min-height:275px}.contact-grid{grid-template-columns:1fr;gap:24px}section.content{padding:70px 0}.foot{align-items:flex-start;flex-direction:column}.definition-list{grid-template-columns:1fr 1fr}}
+@media(max-width:430px){.facet-nav-links{gap:9px}.facet-nav-links a{font-size:8px}.facet-brand{font-size:11px}.facet-mark{width:9px;height:9px}.facet-contact{font-size:8px;padding:6px}.facet-panel{min-height:520px}.facet-copy h1{font-size:58px}.facet-copy p{max-width:300px}.definition-list{grid-template-columns:1fr}.facet-definitions{padding:25px 22px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+</style>
 </head>
-
 <body>
-<header>
+<div class="noise" aria-hidden="true"></div>
+<header class="site-header">
   <div class="wrap nav">
-    <a class="brand" href="#home" aria-label="PS Web Studio home"><span class="logo">PS</span><span>PS Web Studio</span></a>
-    <nav class="navlinks" id="navlinks">
-      <a href="#designs">Designs</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#reviews">Reviews</a>
+    <a class="brand" href="#home" aria-label="PS Web Studio home"><span class="brand-mark">PS</span><span>PS WEB STUDIO</span></a>
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#designs">Designs</a><a href="#services">Services</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a>
     </nav>
-    <a class="btn btn-primary" href="#order">Start a Project</a>
-    <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    <a class="nav-cta" href="#contact">Start a project ↗</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Toggle navigation" aria-expanded="false">☰</button>
   </div>
 </header>
-
 <main>
-<section class="facet-hero" id="home" aria-label="PS Web Studio real-time material studio experience">
-  <div class="facet-stage" id="facetStage">
-    <div class="facet-nav" id="facetNav">
+<section class="facet-hero" id="home" aria-label="PS Web Studio cinematic glass hero">
+  <div class="facet-stage">
+    <div class="facet-nav">
       <a class="facet-brand" href="#home"><span class="facet-mark"></span>PS Web Studio</a>
-      <nav aria-label="PS Web Studio navigation"><a href="#services">Studio</a><a href="#designs">Materials</a><a href="#pricing">Pricing</a></nav>
-      <a class="facet-signin" href="#order">Sign in <span>↗</span></a>
+      <nav class="facet-nav-links" aria-label="Studio navigation"><a href="#services">Studio</a><a href="#designs">Materials</a><a href="#pricing">Pricing</a></nav>
+      <a class="facet-contact" href="#contact">Let's talk <span>↗</span></a>
     </div>
     <div class="facet-panel" id="facetPanel">
-      <canvas id="facetCanvas" aria-hidden="true"></canvas>
+      <div class="facet-fallback" id="facetFallback"></div>
+      <canvas id="facetCanvas" aria-label="Interactive three-dimensional glass shard artwork"></canvas>
       <div class="facet-copy" id="facetCopy">
-        <div class="facet-eyebrow">REAL-TIME MATERIAL STUDIO</div>
-        <h1>Designed<br>in glass.</h1>
-        <p>Author dispersion, transmission, and refraction in the browser. Live<br class="facet-wide"> previews, real materials.</p>
-        <div class="facet-actions"><a class="facet-open" href="#designs">Open studio</a><button class="facet-paper" id="facetRead" type="button">Read paper →</button></div>
-        <div class="facet-meta"><span>© PS Web Studio</span><span>KHR_materials_dispersion</span></div>
+        <div class="facet-eyebrow">PS WEB STUDIO / DIGITAL MATERIALS</div>
+        <h1>Designed<br>in <span>glass.</span></h1>
+        <p>Thoughtful digital experiences, shaped with clarity, precision and a little bit of magic.</p>
+        <div class="facet-actions"><a class="facet-open" href="#designs">Explore studio ↗</a><button class="facet-paper" id="readPaper" type="button">Read paper →</button></div>
+        <div class="facet-meta"><span>© PS WEB STUDIO</span><span>REAL-TIME MATERIAL STUDY</span><span>01 / 05</span></div>
       </div>
-      <div class="facet-fallback" id="facetFallback" hidden></div>
+      <div class="facet-definitions" id="definitions" aria-hidden="true">
+        <div class="definition-inner">
+          <div class="definition-kicker">PS WEB STUDIO / MATERIAL NOTES</div>
+          <h2>Five ideas behind the surface.</h2>
+          <div class="definition-list">
+            <article class="definition-item"><strong>Iridescence</strong><p>A shifting play of colour that changes with viewing angle and the way light meets a surface.</p></article>
+            <article class="definition-item"><strong>Index of refraction</strong><p>A measure of how light changes direction as it passes from one material into another.</p></article>
+            <article class="definition-item"><strong>Dispersion</strong><p>The separation of light into colours because different wavelengths bend by different amounts.</p></article>
+            <article class="definition-item"><strong>Transmission</strong><p>The portion of light that travels through a material instead of reflecting from or being absorbed by it.</p></article>
+            <article class="definition-item"><strong>Roughness</strong><p>The microscopic texture that softens reflections and turns sharp highlights into a wider glow.</p></article>
+          </div>
+          <button class="facet-back" id="backToGlass" type="button">← Back to the experience</button>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="facet-definitions" id="facetDefinitions" aria-hidden="true">
-    <div class="facet-definition-copy">
-      <h2>Real-time glass, in five terms.</h2>
-      <p><strong>Iridescence</strong> — A colour shift caused by thin-film interference, changing with angle and thickness.</p>
-      <p><strong>Index of refraction</strong> — A measure of how much light changes direction as it enters a material.</p>
-      <p><strong>Dispersion</strong> — The separation of light into colours because each wavelength bends differently.</p>
-      <p><strong>Transmission</strong> — The amount of light that passes through a surface rather than being reflected or absorbed.</p>
-      <p><strong>Roughness</strong> — The microscopic texture that spreads reflections from sharp highlights into soft light.</p>
-    </div>
-    <button class="facet-back" id="facetBack" type="button">← Back</button>
   </div>
 </section>
 
 <section class="content" id="designs">
   <div class="wrap">
-    <div class="section-head"><div class="kicker">Design collection</div><h2>A look that fits your business.</h2><p>Choose a starting style. We’ll adjust the content, colours and sections to match your business.</p></div>
-    <div class="template-grid">
-      <article class="template"><div class="template-art art-shop"><div class="art-label">LOCAL BUSINESS</div><div class="art-title">Your sho
+    <div class="section-head"><div><div class="kicker">Design collection</div><h2>A look that fits your business.</h2></div><p>Choose a direction. We shape the layout, colours and content around your brand and your goals.</p></div>
+    <div class="cards">
+      <article class="card"><div class="card-no">01 / PRESENCE</div><h3>Business websites</h3><p>Clear, confident websites that introduce your business, services and contact details.</p></article>
+      <article class="card"><div class="card-no">02 / CONVERSION</div><h3>Landing pages</h3><p>Focused pages for campaigns, products and services, with a clear next step for visitors.</p></article>
+      <article class="card"><div class="card-no">03 / PERSONAL</div><h3>Portfolios</h3><p>Distinctive digital homes for creators, freelancers and professionals.</p></article>
+    </div>
+  </div>
+</section>
+<section class="content" id="services">
+  <div class="wrap">
+    <div class="section-head"><div><div class="kicker">What we do</div><h2>From first idea to live website.</h2></div><p>Practical design and development for people who want a polished online presence without unnecessary complexity.</p></div>
+    <div class="cards">
+      <article class="card"><div class="card-no">01 / DESIGN</div><h3>Visual direction</h3><p>Colour, typography and layout choices that make your business feel recognisable and consistent.</p></article>
+      <article class="card"><div class="card-no">02 / DEVELOPMENT</div><h3>Responsive build</h3><p>Mobile-friendly pages, accessible navigation and interactions that work across screen sizes.</p></article>
+      <article class="card"><div class="card-no">03 / REFRESH</div><h3>Website improvements</h3><p>Improve an existing website with clearer content, cleaner structure and a more modern feel.</p></article>
+    </div>
+  </div>
+</section>
+<section class="content" id="pricing">
+  <div class="wrap">
+    <div class="section-head"><div><div class="kicker">Simple starting prices</div><h2>Choose your starting point.</h2></div><p>These are starting prices. Final scope, features and delivery details are confirmed before work begins.</p></div>
+    <div class="cards">
+      <article class="card price-card"><div class="card-no">01 / STARTER</div><h3>Starter</h3><div class="price">₹600 <small>/ starting at</small></div><ul><li>Single-page website</li><li>Responsive layout</li><li>Basic contact section</li></ul><a class="btn" href="#contact" data-plan="Starter">Choose Starter ↗</a></article>
+      <article class="card price-card featured"><div class="card-no">02 / GROWTH</div><h3>Growth</h3><div class="price">₹1,100 <small>/ starting at</small></div><ul><li>Expanded page sections</li><li>Custom visual styling</li><li>Responsive interactions</li></ul><a class="btn primary" href="#contact" data-plan="Growth">Choose Growth ↗</a></article>
+      <article class="card price-card"><div class="card-no">03 / CUSTOM</div><h3>Custom</h3><div class="price">₹1,500 <small>/ starting at</small></div><ul><li>Custom website scope</li><li>Tailored design direction</li><li>Features discussed together</li></ul><a class="btn" href="#contact" data-plan="Custom">Discuss a project ↗</a></article>
+    </div>
+  </div>
+</section>
+<section class="content" id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-copy"><div class="kicker">Get in touch</div><h2>Have an idea?<br>Let's shape it.</h2><p>Share a few details and we'll prepare a message for Instagram. You can review it before sending.</p><p>Instagram: <a href="https://www.instagram.com/ps_web_studio_2026/" target="_blank" rel="noopener">@ps_web_studio_2026 ↗</a></p></div>
+    <form class="form" id="projectForm">
+      <div class="field"><label for="name">YOUR NAME</label><input id="name" name="name" autocomplete="name" placeholder="Your name" required></div>
+      <div class="field"><label for="email">EMAIL (OPTIONAL)</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com"></div>
+      <div class="field"><label for="plan">PROJECT TYPE</label><select id="plan" name="plan"><option value="Not sure yet">Not sure yet</option><option>Starter — ₹600</option><option>Growth — ₹1,100</option><option>Custom — ₹1,500</option><option>Website refresh</option></select></div>
+      <div class="field"><label for="budget">BUDGET / NOTES</label><input id="budget" name="budget" placeholder="Optional"></div>
+      <div class="field full"><label for="details">TELL US ABOUT YOUR IDEA</label><textarea id="details" name="details" placeholder="What would you like to build?" required></textarea></div>
+      <div class="form-note">This opens Instagram in a new tab. Not
