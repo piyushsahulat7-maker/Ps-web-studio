@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#08050D">
+<meta name="theme-color" content="#FFFFFF">
 <meta name="description" content="PS Web Studio creates modern websites, landing pages and digital experiences.">
 <meta property="og:title" content="PS Web Studio">
 <meta property="og:description" content="Your Vision | Our Design">
@@ -14,12 +14,12 @@
 
 <style>
 :root{
---bg:#08050D;
---surface:#130C1D;
---text:#F8F4FF;
---muted:#B5A9C5;
---lav:#A855F7;
---line:rgba(192,132,252,.20);
+--bg:#FFFFFF;
+--surface:#F3F9F5;
+--text:#17251D;
+--muted:#64766B;
+--lav:#168B55;
+--line:rgba(22,139,85,.18);
 --max:1160px;
 }
 *{box-sizing:border-box}
@@ -39,7 +39,7 @@ background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='htt
 }
 header{
 height:74px;position:sticky;top:0;z-index:30;
-background:#0B0711EF;backdrop-filter:blur(18px);
+background:#FFFFFFEF;backdrop-filter:blur(18px);
 border-bottom:1px solid var(--line)
 }
 .nav{height:100%;display:flex;align-items:center;justify-content:space-between}
@@ -48,30 +48,30 @@ border-bottom:1px solid var(--line)
 width:32px;height:32px;border:1px solid var(--lav);
 border-radius:9px;display:grid;place-items:center;color:var(--lav)
 }
-.links{display:flex;gap:26px;font-size:12px;color:#D0C3DF}
-.links a:hover{color:#C084FC}
+.links{display:flex;gap:26px;font-size:12px;color:#52685A}
+.links a:hover{color:#168B55}
 .pill,.btn{
 display:inline-flex;justify-content:center;align-items:center;
 padding:11px 17px;border:1px solid var(--line);
 border-radius:99px;font-size:12px;cursor:pointer;
-background:#A855F710;color:white;transition:.25s
+background:#168B5509;color:#075B3B;transition:.25s
 }
 .btn:hover,.pill:hover{border-color:var(--lav);transform:translateY(-2px)}
-.primary{background:var(--lav);color:#16091F;border-color:var(--lav)}
-.menu{display:none;background:none;color:white;border:1px solid var(--line);padding:8px 12px;border-radius:9px}
+.primary{background:var(--lav);color:white;border-color:var(--lav)}
+.menu{display:none;background:none;color:#075B3B;border:1px solid var(--line);padding:8px 12px;border-radius:9px}
 
 /* SEC2 STYLE HERO */
 .sec2{
 min-height:calc(100svh - 74px);
 display:flex;align-items:center;position:relative;overflow:hidden;
-background:radial-gradient(ellipse at 72% 45%,#351653 0,#190D27 43%,#08050D 78%);
+background:radial-gradient(ellipse at 72% 45%,#D2F0DD 0,#EFF8F1 43%,#FFFFFF 78%);
 padding:65px 0
 }
 .sec2:before{
 content:"";position:absolute;width:650px;height:650px;
 border-radius:50%;right:-130px;top:50%;
 transform:translateY(-50%);
-background:radial-gradient(circle,#A855F730,transparent 68%);
+background:radial-gradient(circle,#168B5524,transparent 68%);
 pointer-events:none
 }
 .sec2-grid{
@@ -79,7 +79,7 @@ display:grid;grid-template-columns:1.1fr .9fr;
 gap:45px;align-items:center;position:relative
 }
 .eyebrow,.kicker{
-font-size:10px;letter-spacing:.22em;color:#C084FC;
+font-size:10px;letter-spacing:.22em;color:var(--lav);
 text-transform:uppercase;font-weight:700
 }
 .sec2 h1{
@@ -87,7 +87,7 @@ font-size:clamp(55px,8vw,105px);
 line-height:.94;letter-spacing:-.085em;
 font-weight:600;margin:22px 0
 }
-.sec2 h1 span{font-family:Georgia,serif;font-style:italic;color:#C084FC;font-weight:400}
+.sec2 h1 span{font-family:Georgia,serif;font-style:italic;color:var(--lav);font-weight:400}
 .sec2-copy{max-width:460px;color:var(--muted);font-size:14px;line-height:1.9}
 .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 .hero-visual{
@@ -96,10 +96,10 @@ perspective:900px
 }
 .glass{
 width:min(340px,85%);height:360px;
-border:1px solid #C084FC66;
+border:1px solid #168B5566;
 border-radius:48% 48% 14px 14px;
-background:linear-gradient(135deg,#C084FC35,#A855F70B 40%,#ffffff10);
-box-shadow:inset 0 0 45px #C084FC20,0 30px 100px #0008;
+background:linear-gradient(135deg,#FFFFFFCC,#B9E8C90B 40%,#168B5510);
+box-shadow:inset 0 0 45px #168B5513,0 30px 100px #075B3B18;
 backdrop-filter:blur(12px);
 transform:rotate(-9deg);
 animation:float 7s ease-in-out infinite;
@@ -107,20 +107,20 @@ position:relative;overflow:hidden
 }
 .glass:before{
 content:"";position:absolute;inset:0;
-background:linear-gradient(115deg,transparent 25%,#C084FC38 42%,transparent 58%);
+background:linear-gradient(115deg,transparent 25%,#168B5538 42%,transparent 58%);
 animation:shine 6s linear infinite
 }
 .glass:after{
 content:"PS";position:absolute;inset:0;display:grid;place-items:center;
 font-size:110px;font-weight:800;letter-spacing:-.1em;
-color:#C084FC30
+color:#168B5520
 }
 .glass-label{
 position:absolute;bottom:30px;left:0;right:0;text-align:center;
-font-size:9px;letter-spacing:.3em;color:#E9D5FF90
+font-size:9px;letter-spacing:.3em;color:#075B3B90
 }
 .orbit{
-position:absolute;width:390px;height:390px;border:1px solid #A855F740;
+position:absolute;width:390px;height:390px;border:1px solid #168B5535;
 border-radius:50%;transform:rotateX(68deg)
 }
 .orbit.two{width:450px;height:450px;transform:rotateY(65deg)}
@@ -129,29 +129,29 @@ border-radius:50%;transform:rotateX(68deg)
 
 /* ORIGINAL FACET STYLE */
 .facet{
-padding:65px 0;background:radial-gradient(ellipse at 50% 40%,#29123D,#08050D 75%)
+padding:65px 0;background:radial-gradient(ellipse at 50% 40%,#E0F3E6,#FFFFFF 75%)
 }
 .facet-box{
-border:1px solid #C084FC30;min-height:510px;
+border:1px solid #168B5524;min-height:510px;
 position:relative;overflow:hidden;
-background:radial-gradient(ellipse at 70% 45%,#65328B,#29183A 35%,#0B0711 85%);
+background:radial-gradient(ellipse at 70% 45%,#B5E4C5,#E8F5EB 35%,#FFFFFF 85%);
 display:flex;align-items:center;padding:clamp(25px,8vw,110px)
 }
 .facet-box:after{
 content:"";position:absolute;inset:0;pointer-events:none;
-background:linear-gradient(115deg,#ffffff08,transparent 50%,#C084FC08)
+background:linear-gradient(115deg,#FFFFFF50,transparent 50%,#168B5505)
 }
 .facet-copy{position:relative;z-index:2;max-width:560px}
 .facet-copy h2{
 font-size:clamp(55px,9vw,110px);line-height:.88;
 letter-spacing:-.09em;margin:24px 0;font-weight:600
 }
-.facet-copy h2 span{font-family:Georgia,serif;color:#C084FC;font-style:italic;font-weight:400}
+.facet-copy h2 span{font-family:Georgia,serif;color:var(--lav);font-style:italic;font-weight:400}
 .facet-copy p{font-size:13px;color:var(--muted);max-width:400px;line-height:1.8}
 
 /* SECTIONS */
 section.content{
-padding:85px 0;border-top:1px solid #A855F718;background:#0B0711
+padding:85px 0;border-top:1px solid #168B5510;background:#FFFFFF
 }
 .section-head{
 display:flex;justify-content:space-between;align-items:end;
@@ -165,11 +165,11 @@ letter-spacing:-.07em;font-weight:550;margin:12px 0
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .card{
 padding:25px;border:1px solid var(--line);border-radius:15px;
-background:linear-gradient(145deg,#A855F714,#ffffff02);
+background:linear-gradient(145deg,#168B5509,#FFFFFF);
 transition:.3s;min-height:185px
 }
-.card:hover{transform:translateY(-5px);border-color:#A855F788}
-.card-no{font-size:9px;color:#C084FC;letter-spacing:.15em}
+.card:hover{transform:translateY(-5px);border-color:#168B5577}
+.card-no{font-size:9px;color:var(--lav);letter-spacing:.15em}
 .card h3{font-size:18px;margin:22px 0 8px}
 .card p{font-size:12px;color:var(--muted);margin:0}
 .price-card{display:flex;flex-direction:column;min-height:295px}
@@ -177,26 +177,26 @@ transition:.3s;min-height:185px
 .price small{font-size:10px;color:var(--muted)}
 .price-card ul{padding-left:17px;color:var(--muted);font-size:11px;line-height:2.1}
 .price-card .btn{margin-top:auto;align-self:flex-start}
-.featured{border-color:#A855F788;background:linear-gradient(145deg,#A855F728,#ffffff03)}
+.featured{border-color:#168B5588;background:linear-gradient(145deg,#168B5518,#FFFFFF)}
 
 /* CONTACT */
 .contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px}
 .contact-copy h2{font-size:clamp(35px,5vw,60px);line-height:1;margin:18px 0;letter-spacing:-.07em}
 .contact-copy p{font-size:12px;color:var(--muted)}
-.contact-copy a{color:#C084FC}
+.contact-copy a{color:var(--lav)}
 .form{display:grid;grid-template-columns:1fr 1fr;gap:13px}
 .field{display:flex;flex-direction:column;gap:7px}
 .field.full{grid-column:1/-1}
 .field label{font-size:9px;color:var(--muted);letter-spacing:.1em}
 .field input,.field textarea,.field select{
 width:100%;padding:13px;border:1px solid var(--line);
-border-radius:9px;background:#160E20;color:white;outline:none;font-size:12px
+border-radius:9px;background:#F6FAF7;color:#17251D;outline:none;font-size:12px
 }
-.field input:focus,.field textarea:focus,.field select:focus{border-color:#A855F7}
+.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--lav)}
 .field textarea{min-height:110px;resize:vertical}
 .form .btn{grid-column:1/-1;justify-self:start}
-.form-note{grid-column:1/-1;font-size:10px;color:#A99AB8}
-footer{padding:25px 0;border-top:1px solid var(--line);font-size:10px;color:#A99AB8}
+.form-note{grid-column:1/-1;font-size:10px;color:#75877B}
+footer{padding:25px 0;border-top:1px solid var(--line);font-size:10px;color:#64766B}
 .foot{display:flex;justify-content:space-between;gap:15px}
 
 /* RESPONSIVE */
@@ -204,7 +204,7 @@ footer{padding:25px 0;border-top:1px solid var(--line);font-size:10px;color:#A99
 .wrap{width:calc(100% - 32px)}
 .links{
 display:none;position:absolute;top:73px;left:16px;right:16px;
-padding:20px;background:#160E20;border:1px solid var(--line);
+padding:20px;background:#FFFFFF;border:1px solid var(--line);
 border-radius:12px;flex-direction:column;gap:18px
 }
 .links.open{display:flex}
